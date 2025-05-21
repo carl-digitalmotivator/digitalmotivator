@@ -7,7 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-orange-400: oklch(75% 0.183 55.934);
+    --color-orange-500: oklch(70.5% 0.213 47.604);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-gray-950: oklch(13% 0.028 261.692);
@@ -234,6 +234,9 @@
       margin-inline-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-x-reverse)));
     }
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -244,11 +247,11 @@
   .bg-\[\#222\] {
     background-color: #222;
   }
-  .bg-orange-400 {
-    background-color: var(--color-orange-400);
+  .bg-orange-500 {
+    background-color: var(--color-orange-500);
   }
-  .bg-\[url\(\.\.\/assets\/dont-stop\.png\)\] {
-    background-image: url(../assets/dont-stop.png);
+  .bg-\[url\(\.\.\/assets\/dont-stop\.webp\)\] {
+    background-image: url(../assets/dont-stop.webp);
   }
   .bg-cover {
     background-size: cover;
@@ -264,6 +267,9 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
