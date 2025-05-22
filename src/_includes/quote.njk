@@ -1,0 +1,9 @@
+---
+layout: base.njk
+---
+  <div class="quote-page">
+    <img src="{{ image }}" alt="Inspirational Image" style="max-width:100%;">
+    <blockquote style="font-size: 1.5rem;">{{ content | safe }}</blockquote>
+    <p><small>{{ date | date: "%B %d, %Y" }}</small></p>
+    <a href="/quotes/">← Back to Archive</a>
+  </div>
