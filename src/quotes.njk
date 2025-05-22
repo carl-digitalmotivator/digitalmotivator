@@ -1,0 +1,21 @@
+---
+layout: base.njk
+title: Daily Quotes
+pagination:
+  data: collections.quotes
+  size: 10
+permalink: "quotes/{{ pagination.pageNumber }}/index.html"
+---
+
+<section>
+    <h1>Daily Inspiration</h1>
+
+{% for quote in pagination.items %}
+  <div class="quote-entry">
+    <img src="{{ quote.data.image }}" alt="Inspirational Image">
+    <blockquote>{{ quote.templateContent | safe }}</blockquote>
+    <small>{{ quote.date | date: "%B %d, %Y" }}</small>
+  </div>
+{% endfor %}
+
+</section>

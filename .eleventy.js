@@ -1,9 +1,12 @@
 
 module.exports = function (eleventyConfig) {
-  // Copy static assets to the output directory
-  eleventyConfig.addPassthroughCopy("./src/assets");
- 
 
+  eleventyConfig.addPassthroughCopy("./src/assets");
+
+
+   eleventyConfig.addCollection("quotes", function (collection) {
+  return collection.getFilteredByGlob("src/_quotes/*.md");
+});
  
   return {
     dir: {
@@ -12,4 +15,7 @@ module.exports = function (eleventyConfig) {
       includes: "_includes",
     },
   };
+
+
+
 };
